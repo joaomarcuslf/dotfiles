@@ -728,9 +728,11 @@ set autoindent
 set laststatus=2
 set confirm
 set mouse=a
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set softtabstop=0
 set expandtab
+set shiftwidth=2
+set smarttab
 
 " IndentLine
 let g:indentLine_enabled = 1
