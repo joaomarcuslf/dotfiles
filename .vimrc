@@ -735,12 +735,11 @@ set shiftwidth=2
 set smarttab
 
 " IndentLine
-let g:indentLine_enabled = 1
+let g:indentLine_enabled = 0
 let g:indentLine_concealcursor = 0
 let indentChar = '.'
 let g:indentLine_faster = 0
 
-let g:clj_fmt_autosave = 1
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_color_term = 239
@@ -754,9 +753,13 @@ let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 1
 let g:indentLine_setConceal = 1
 
+" CtrlP
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Clojure Setup
 
+let g:clj_fmt_autosave = 1
 let g:clojure_syntax_keywords = {
       \ 'clojureMacro': ["defproject", "defcustom"],
       \ 'clojureFunc': ["string/join", "string/replace"]
