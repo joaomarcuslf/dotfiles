@@ -15,3 +15,4 @@ alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "stat
 alias findInFiles='grep -Rins'
 alias rm='rm -i'
 alias wor='cd ~/workspace'
+alias refresh='source ~/.zshrc'
