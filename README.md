@@ -22,3 +22,5 @@ sudo chmod +x start.sh
 - firefox-aurora/firefox-developer
 - git
 - tig
+- oh-my-zsh
+- zsh-autosuggestions

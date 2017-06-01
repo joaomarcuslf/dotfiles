@@ -5,7 +5,7 @@ ZSH_THEME="joaomarcuslf"
 
 ENABLE_CORRECTION="true"
 
-plugins=(git branch git-extras git-flow github git-remote-branchs osx)
+plugins=(git git-extras zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
