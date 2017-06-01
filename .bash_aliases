@@ -13,6 +13,27 @@ alias addAll='git add -A'
 alias wip=' commit -am "WIP"'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias findInFiles='grep -Rins'
-alias rm='rm -i'
+alias rm='rm -i -f'
 alias wor='cd ~/workspace'
 alias refresh='source ~/.zshrc'
+
+
+# Node
+alias n='npm'
+alias ni='npm install'
+alias ninstall='npm install'
+alias nt='npm test'
+alias ntest='npm install'
+alias y='yarn'
+alias ya='yarn add'
+alias yadd='yarn add'
+alias yt='yarn test'
+alias ytest='yarn test'
+
+# Ruby
+alias binstall='bundle install'
+alias bupdate='bundle update'
+alias bexec='bundle exec'
+alias railss='bundle exec rails s'
+alias rmigrate='bundle exec rake db:migrate'
+alias rscaffold='bundle exec rails generate scaffold'
