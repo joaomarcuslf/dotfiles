@@ -5,7 +5,7 @@ ZSH_THEME="joaomarcuslf"
 
 ENABLE_CORRECTION="true"
 
-plugins=(git git-extras zsh-autosuggestions)
+plugins=(git git-extras zsh-autosuggestions alias-tips)
 
 source $ZSH/oh-my-zsh.sh
 

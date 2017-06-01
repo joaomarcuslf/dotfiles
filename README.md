@@ -23,4 +23,5 @@ sudo chmod +x start.sh
 - git
 - tig
 - oh-my-zsh
-- zsh-autosuggestions
+  - zsh-autosuggestions
+  - alias-tips

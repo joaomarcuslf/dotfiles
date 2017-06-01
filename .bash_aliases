@@ -14,6 +14,7 @@ alias wip=' commit -am "WIP"'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias findInFiles='grep -Rins'
 alias rm='rm -i -f'
+alias mkdir='mkdir -p'
 alias wor='cd ~/workspace'
 alias refresh='source ~/.zshrc'
 
