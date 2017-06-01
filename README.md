@@ -21,6 +21,7 @@ sudo chmod +x start.sh
 - firefox-nightly
 - firefox-aurora/firefox-developer
 - git
+  - git-extras
 - tig
 - oh-my-zsh
   - zsh-autosuggestions
