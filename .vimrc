@@ -712,7 +712,7 @@ let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
 " set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 14
-set guifont=Fira\ Mono\ for\ Powerline:h14
+set guifont=Fira\ Code\ Medium:h12
 set nobackup
 set nowritebackup
 set noswapfile
@@ -851,6 +851,9 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
 
 " Editor config
 let g:EditorConfig_exec_path = '~/.editorconfig'
+
+" Clear highlights and closes Quickfix lists (breaks on non-gui vim)
+nnoremap <silent><ESC> :silent noh<bar>cclose<CR>
 
 " Shift+Insert for Paste from clipboard
 map <S-Insert> "+p
