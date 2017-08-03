@@ -9,6 +9,7 @@ sudo chmod +x start.sh
 
 ## To install:
 
+- FiraCode
 - nvm
 - node
 - rbenv
@@ -26,3 +27,13 @@ sudo chmod +x start.sh
 - oh-my-zsh
   - zsh-autosuggestions
   - alias-tips
+
+## Mac only:
+
+- iterm2
+- [brew](https://brew.sh/index_pt-br.html)
+
+## Linux only:
+
+- terminator
+- [brew](http://linuxbrew.sh/)
