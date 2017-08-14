@@ -395,8 +395,8 @@ set autoread
 "*****************************************************************************
 
 "" Split
-noremap <Leader>h :<C-u>split<CR>
-noremap <Leader>v :<C-u>vsplit<CR>
+noremap <Leader>h :<c-u>split<CR>
+noremap <Leader>v :<c-u>vsplit<CR>
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
@@ -423,10 +423,10 @@ nnoremap <silent> <S-t> :tabnew<CR>
 nnoremap <leader>. :lcd %:p:h<CR>
 
 "" Opens an edit command with the path of the currently edited file filled in
-noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+noremap <Leader>e :e <c-R>=expand("%:p:h") . "/" <CR>
 
 "" Opens a tab edit command with the path of the currently edited file filled
-noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+noremap <Leader>te :tabe <c-R>=expand("%:p:h") . "/" <CR>
 
 "" fzf.vim
 set wildmode=list:longest,list:full
@@ -446,16 +446,16 @@ if executable('rg')
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 endif
 
-cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+cnoremap <c-P> <c-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 
 " snippets
-let g:UltiSnipsExpandTrigger="<C-O>"
-let g:UltiSnipsExpandTrigger="<C-ENTER>"
+let g:UltiSnipsExpandTrigger="<c-O>"
+let g:UltiSnipsExpandTrigger="<c-ENTER>"
 
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:UltiSnipsEditSplit="vertical"
 
@@ -490,8 +490,8 @@ noremap XX "+x<CR>
 
 if has('macunix')
   " pbcopy for OSX copy/paste
-  vmap <C-x> :!pbcopy<CR>
-  vmap <C-c> :w !pbcopy<CR><CR>
+  vmap <c-x> :!pbcopy<CR>
+  vmap <c-c> :w !pbcopy<CR><CR>
 endif
 
 "" Buffer nav
@@ -507,10 +507,10 @@ noremap <leader>c :bd<CR>
 nnoremap <silent> <leader><space> :noh<cr>
 
 "" Switching windows
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+noremap <c-l> <c-w>l
+noremap <c-h> <c-w>h
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
@@ -580,7 +580,7 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
+let g:jedi#completions_command = "<c-Space>"
 let g:jedi#smart_auto_mappings = 0
 
 " syntastic
@@ -712,7 +712,7 @@ let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
 " set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 14
-set guifont=Fira\ Code\ Medium:h12
+set guifont=Fira\ Code\ Medium:h13
 set nobackup
 set nowritebackup
 set noswapfile
@@ -840,9 +840,9 @@ let g:jsx_ext_required = 0
 
 let g:UltiSnipsEditSplit="vertical"
 
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-ENTER>'
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<c-ENTER>'
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -859,7 +859,7 @@ nnoremap <silent><ESC> :silent noh<bar>cclose<CR>
 map <S-Insert> "+p
 map! <s-insert> "+p
 set pastetoggle=<F10>
-inoremap <C-v> <F10><C-r>+<F10>
+inoremap <c-v> <F10><c-r>+<F10>
 
 " F7 Format file
 
@@ -867,47 +867,47 @@ map <F7> mzgg=G`z
 map! <F7> mzgg=G`z
 
 " CTRL-X Cut to System
-map <C-X> "+x
-map! <C-X> "+x
+map <c-X> "+x
+map! <c-X> "+x
 
 " CTRL-C Copy
-map <C-C> "+y
-map! <C-C> "+y
+map <c-C> "+y
+map! <c-C> "+y
 
 "  Ctrl + a --> Select All
 
-map <C-a> GVgg
-map! <C-a> GVgg
+map <c-a> GVgg
+map! <c-a> GVgg
 
 " Ctrl + o --> Open File (Opens current folder to browse)
 
-nmap <C-o> :e . <Enter>
+nmap <c-o> :e . <Enter>
 
 " Ctrl + z --> Undo
 " Ctrl + r --> Redo
 
-nmap <C-z> u
+nmap <c-z> u
 
 " Ctrl + t --> Open new tab
 
-nmap <C-t> :tabnew <Enter>
+nmap <c-t> :tabnew <Enter>
 
 " Ctrl + f --> Find
 
-autocmd VimEnter * nmap <C-f> :/
+autocmd VimEnter * nmap <c-f> :/
 
 " Ctrl + d --> Find Next
 
-nmap <C-d> n
+nmap <c-d> n
 
 " Ctrl + h --> Replace All
 
-nmap <C-h> :%s/
+nmap <c-h> :%s/
 
 " Ctrl + s --> Save file
 
-map <C-s> <Esc>:w<CR>
-map! <C-s> <Esc>:w<CR>
+map <c-s> <Esc>:w<CR>
+map! <c-s> <Esc>:w<CR>
 
 " F4 --> Search in project
 map <F4> :Grep -rins<Space>
@@ -919,7 +919,7 @@ map <F8> :vertical wincmd f<CR>
 
 " Ctrl + F8 --> Open file under cursor Horizontal
 
-map <C-F8> : wincmd f<CR>
+map <c-F8> : wincmd f<CR>
 
 " Ctrl + w + t --> Open File under cursor new tab
 
