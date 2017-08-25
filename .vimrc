@@ -23,126 +23,119 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 
 "*****************************************************************************
-"" Plug install packages
-"*****************************************************************************
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/grep.vim'
-Plug 'vim-scripts/CSApprox'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'Raimondi/delimitMate'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
-Plug 'Yggdroot/indentLine'
-Plug 'avelino/vim-bootstrap-updater'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-git'
-Plug 'ervandew/supertab'
-Plug 'Valloric/YouCompleteMe'
-Plug 'kien/ctrlp.vim'
-
-if isdirectory('/usr/local/opt/fzf')
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-endif
-let g:make = 'gmake'
-if exists('make')
-  let g:make = 'make'
-endif
-Plug 'Shougo/vimproc.vim', {'do': g:make}
-
-"" Vim-Session
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
-
-if v:version >= 703
-  Plug 'Shougo/vimshell.vim'
-endif
-
-if v:version >= 704
-  "" Snippets
-  Plug 'SirVer/ultisnips'
-endif
-
-Plug 'honza/vim-snippets'
-
-"" Color
-Plug 'tomasr/molokai'
-Plug 'joshdick/onedark.vim'
-
-"*****************************************************************************
-"" Custom bundles
+"                          Plugins Start
 "*****************************************************************************
 
-" c
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
-Plug 'ludwig/split-manpage.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'vim-scripts/grep.vim'
+  Plug 'vim-scripts/CSApprox'
+  Plug 'bronson/vim-trailing-whitespace'
+  Plug 'Raimondi/delimitMate'
+  Plug 'majutsushi/tagbar'
+  Plug 'scrooloose/syntastic'
+  Plug 'Yggdroot/indentLine'
+  Plug 'avelino/vim-bootstrap-updater'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'tpope/vim-git'
+  Plug 'ervandew/supertab'
+  Plug 'Valloric/YouCompleteMe'
+  Plug 'kien/ctrlp.vim'
+  Plug 'editorconfig/editorconfig-vim'
+
+  if isdirectory('/usr/local/opt/fzf')
+    Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+  else
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+    Plug 'junegunn/fzf.vim'
+  endif
+
+  let g:make = 'gmake'
+  if exists('make')
+    let g:make = 'make'
+  endif
+
+  Plug 'Shougo/vimproc.vim', {'do': g:make}
+
+  Plug 'xolox/vim-misc'
+  Plug 'xolox/vim-session'
+
+  if v:version >= 703
+    Plug 'Shougo/vimshell.vim'
+  endif
+
+  if v:version >= 704
+    "" Snippets
+    Plug 'SirVer/ultisnips'
+  endif
+
+  Plug 'honza/vim-snippets'
+
+  " Color
+    Plug 'tomasr/molokai'
+    Plug 'joshdick/onedark.vim'
+
+  " c
+    Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
+    Plug 'ludwig/split-manpage.vim'
+
+  " elixir
+    Plug 'elixir-lang/vim-elixir'
+    Plug 'carlosgaldino/elixir-snippets'
 
 
-" elixir
-Plug 'elixir-lang/vim-elixir'
-Plug 'carlosgaldino/elixir-snippets'
+  " haskell
+    Plug 'eagletmt/neco-ghc'
+    Plug 'dag/vim2hs'
+    Plug 'pbrisbin/vim-syntax-shakespeare'
 
 
-" haskell
-"" Haskell Bundle
-Plug 'eagletmt/neco-ghc'
-Plug 'dag/vim2hs'
-Plug 'pbrisbin/vim-syntax-shakespeare'
+  " html
+    Plug 'hail2u/vim-css3-syntax'
+    Plug 'gorodinskiy/vim-coloresque'
+    Plug 'cakebaker/scss-syntax.vim'
+    Plug 'gregsexton/MatchTag'
 
 
-" html
-"" HTML Bundle
-Plug 'hail2u/vim-css3-syntax'
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'gregsexton/MatchTag'
+  " javascript
+    Plug 'jelera/vim-javascript-syntax'
+    Plug 'pangloss/vim-javascript'
+    Plug 'mxw/vim-jsx'
+    Plug 'elzr/vim-json'
+
+  " lisp
+    Plug 'vim-scripts/slimv.vim'
 
 
-" javascript
-"" Javascript Bundle
-Plug 'jelera/vim-javascript-syntax'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'elzr/vim-json'
-
-" lisp
-"" Lisp Bundle
-Plug 'vim-scripts/slimv.vim'
+  " python
+    Plug 'davidhalter/jedi-vim'
 
 
-" python
-"" Python Bundle
-Plug 'davidhalter/jedi-vim'
+  " ruby
+    Plug 'tpope/vim-rails'
+    Plug 'tpope/vim-rake'
+    Plug 'tpope/vim-projectionist'
+    Plug 'thoughtbot/vim-rspec'
+    Plug 'ecomba/vim-ruby-refactoring'
 
+  " Markdown
+    Plug 'tpope/vim-markdown'
+    Plug 'tpope/vim-liquid'
 
-" ruby
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-projectionist'
-Plug 'thoughtbot/vim-rspec'
-Plug 'ecomba/vim-ruby-refactoring'
-
-" Markdown
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-liquid'
-
-" Clojure
-Plug 'venantius/vim-cljfmt'
-Plug 'guns/vim-clojure-static'
-Plug 'venantius/vim-eastwood'
-Plug 'vim-scripts/paredit.vim'
-Plug 'tpope/vim-fireplace'
-
+  " Clojure
+    Plug 'venantius/vim-cljfmt'
+    Plug 'guns/vim-clojure-static'
+    Plug 'venantius/vim-eastwood'
+    Plug 'vim-scripts/paredit.vim'
+    Plug 'tpope/vim-fireplace'
 
 "*****************************************************************************
+"                          Plugins End
 "*****************************************************************************
 
 "" Include user's extra bundle
@@ -203,8 +196,8 @@ endif
 
 " session management
 let g:session_directory = "~/.vim/session"
-let g:session_autoload = "no"
-let g:session_autosave = "no"
+let g:session_autoload = "yes"
+let g:session_autosave = "yes"
 let g:session_command_aliases = 1
 
 "*****************************************************************************
@@ -227,7 +220,6 @@ set gfn=Monospace\ 10
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h12
     set transparency=7
   endif
 else
@@ -304,6 +296,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
+let g:Powerline_symbols = 'fancy'
 
 "*****************************************************************************
 "" Abbreviations
@@ -321,8 +314,10 @@ cnoreabbrev Q q
 cnoreabbrev Qall qall
 
 "" NERDTree configuration
-let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
+let g:NERDTreeChDirMode=1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__', '\.git', '\node_modules]
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
@@ -851,12 +846,53 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
 
 " Editor config
 let g:EditorConfig_exec_path = '~/.editorconfig'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*', 'node_modules', '.git']
 
-" Clear highlights and closes Quickfix lists (breaks on non-gui vim)
-nnoremap <silent><ESC> :silent noh<bar>cclose<CR>
+" Functions
+
+fun! Replace(from, to)
+  exe '%s/' . a:from . '/' . a:to . '/gc'
+endfun
+
+fun! ReplaceAll(from, to)
+  exe '%s/' . a:from . '/' . a:to . '/g'
+endfun
+
+fun! Find(name)
+  exe '/' . a:name
+endfun
+
+fun! Lower(from)
+  exe '%s/' . a:from . '/\L&/gc'
+endfun
+
+fun! Upper(from)
+  exe '%s/' . a:from . '/\U&/gc'
+endfun
+
+fun! Move(line)
+  exe 'm' . a:line
+endfun
+
+fun! Mv(line)
+  exe 'm' . a:line
+endfun
+
+fun! Up()
+  exe 'm-'
+endfun
+
+fun! Down()
+  exe 'm+'
+endfun
+
+if has("gui_running")
+    " Clear highlights and closes Quickfix lists (breaks on non-gui vim)
+    nnoremap <silent><ESC> :silent noh<bar>cclose<CR>
+endif
 
 " Shift+Insert for Paste from clipboard
-map <S-Insert> "+p
+map <s-Insert> "+p
 map! <s-insert> "+p
 set pastetoggle=<F10>
 inoremap <c-v> <F10><c-r>+<F10>
@@ -925,43 +961,10 @@ map <c-F8> : wincmd f<CR>
 
 map <c-w>t <c-w>gf
 
-" Replace
+" Switch tabs
 
-fun! Replace(from, to)
-  exe '%s/' . a:from . '/' . a:to . '/gc'
-endfun
-
-fun! ReplaceAll(from, to)
-  exe '%s/' . a:from . '/' . a:to . '/g'
-endfun
-
-" Functions
-
-fun! Find(name)
-  exe '/' . a:name
-endfun
-
-fun! Lower(from)
-  exe '%s/' . a:from . '/\L&/gc'
-endfun
-
-fun! Upper(from)
-  exe '%s/' . a:from . '/\U&/gc'
-endfun
-
-fun! Move(line)
-  exe 'm' . a:line
-endfun
-
-fun! Mv(line)
-  exe 'm' . a:line
-endfun
-
-fun! Up()
-  exe 'm-'
-endfun
-
-fun! Down()
-  exe 'm+'
-endfun
-
+set switchbuf=usetab
+nnoremap <F6> :sbnext<CR>
+nnoremap <S-F6> :sbprevious<CR>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
