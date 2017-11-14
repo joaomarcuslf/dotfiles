@@ -6,3 +6,5 @@ if [ -f ~/.bash_exports ]; then
 . ~/.bash_exports
 fi
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
