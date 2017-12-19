@@ -9,8 +9,9 @@ alias refresh='source ~/.zshrc'
 
 # Git
 
-alias clearBranchs='git checkout master && git branch | grep -v "master" | xargs git branch -D'
+alias clearBranches='git checkout master && git branch | grep -v "master" | xargs git branch -D'
 alias push='npm test && git push --no-verify'
+alias pushBranch='push origin HEAD'
 alias pull='git pull --prune --tags'
 alias status='git status'
 alias clone='git clone'
@@ -28,8 +29,8 @@ alias wip=' commit -am "WIP"'
 
 # Node
 alias n='npm'
+alias nr='npm run'
 alias ni='npm install'
-alias ninstall='npm install'
 alias nt='npm test'
 alias ntest='npm install'
 alias y='yarn'
