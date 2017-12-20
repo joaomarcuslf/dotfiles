@@ -25,7 +25,8 @@ alias stash='git stash'
 alias ammend='git commit --ammend'
 alias master='checkout master'
 alias addAll='git add -A'
-alias wip=' commit -am "WIP"'
+alias wip='commit -am "WIP"'
+alias wow='git status -sb'
 
 # Node
 alias n='npm'
