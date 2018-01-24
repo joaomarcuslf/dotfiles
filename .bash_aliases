@@ -47,3 +47,6 @@ alias bexec='bundle exec'
 alias railss='bundle exec rails s'
 alias rmigrate='bundle exec rake db:migrate'
 alias rscaffold='bundle exec rails generate scaffold'
+
+# Personal Scripts
+alias remove-duplicates='ruby ~/dotfiles/scripts/remove-duplicates.rb'
