@@ -6,5 +6,8 @@ if [ -f ~/.bash_exports ]; then
 . ~/.bash_exports
 fi
 
+if [ -f ~/.bash_locals ]; then
+. ~/.bash_locals
+fi
 
 
