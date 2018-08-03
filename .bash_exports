@@ -12,4 +12,3 @@ add-zsh-hook chpwd load-nvmrc
 export PATH=~/.local/bin:$PATH
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-

@@ -9,5 +9,3 @@ fi
 if [ -f ~/.bash_locals ]; then
 . ~/.bash_locals
 fi
-
-
