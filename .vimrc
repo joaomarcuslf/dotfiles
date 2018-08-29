@@ -25,34 +25,8 @@ call plug#begin(expand('~/.vim/plugged'))
 
 " Syntax and language specific
 Plug 'tpope/vim-git'
-Plug 'vim-ruby/vim-ruby'
-Plug 'othree/html5.vim'
-Plug 'leshill/vim-json'
-Plug 'tpope/vim-markdown'
-Plug 'ElmCast/elm-vim'
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
-Plug 'tpope/vim-sleuth'
-Plug 'flowtype/vim-flow', { 'for': 'javascript' }
-Plug 'tweekmonster/django-plus.vim'
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'gregsexton/MatchTag'
-Plug 'vim-scripts/slimv.vim'
 Plug 'elzr/vim-json'
-Plug 'venantius/vim-cljfmt'
-Plug 'guns/vim-clojure-static'
-Plug 'venantius/vim-eastwood'
-Plug 'vim-scripts/paredit.vim'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-liquid'
-
 " Actual Plugs
 Plug 'vimlab/split-term.vim'
 Plug 'tpope/vim-surround'
@@ -96,10 +70,8 @@ Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git'
 Plug 'ervandew/supertab'
-Plug 'Valloric/YouCompleteMe'
 Plug 'kien/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ternjs/tern_for_vim'
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
