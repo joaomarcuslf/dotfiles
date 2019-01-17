@@ -9,3 +9,5 @@ ln -sf `pwd`/.zshrc ~/.zshrc
 ln -sf `pwd`/.bash_aliases ~/.bash_aliases
 ln -sf `pwd`/.bash_exports ~/.bash_exports
 ln -sf `pwd`/.bashrc ~/.bashrc
+
+ln -sf `pwd`/zsh-themes/joaomarcuslf.zsh-theme ~/.oh-my-zsh/themes/joaomarcuslf.zsh-theme
