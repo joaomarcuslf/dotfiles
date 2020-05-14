@@ -1,0 +1,27 @@
+# xsetwacom set "Wacom Intuos S Pad pad" "Button" "1" "button +1 "
+# xsetwacom set "Wacom Intuos S Pad pad" "Button" "2" "button +2 "
+# xsetwacom set "Wacom Intuos S Pad pad" "Button" "3" "button +3 "
+# xsetwacom set "Wacom Intuos S Pad pad" "Button" "8" "button +8 "
+# xsetwacom set "Wacom Intuos S Pad pad" "Button" "9" "button +9 "
+
+# Pad
+xsetwacom set "Wacom Intuos S Pad pad" Button 3 key "PgDn" # Upper Left, mapped to Page Down
+xsetwacom set "Wacom Intuos S Pad pad" Button 9 key "PgUp" # Upper Right, mapped to Page Up
+xsetwacom set "Wacom Intuos S Pad pad" Button 1 key "+Ctrl Z -Ctrl" # Lower Left, mapped to Ctrl+Z
+xsetwacom set "Wacom Intuos S Pad pad" Button 8 key "+Ctrl Shift Z -Ctrl" # Lower Right, mapped to Ctrl+Shift+Z
+
+# Stylus
+xsetwacom set "Wacom Intuos S Pen stylus" Mode Relative
+# xsetwacom set "Wacom Intuos S Pen stylus" "Button" "1" "button +1 "
+# xsetwacom set "Wacom Intuos S Pen stylus" "Button" "2" "button +2 "
+# xsetwacom set "Wacom Intuos S Pen stylus" "Button" "3" "button +3 "
+# xsetwacom set "Wacom Intuos S Pen stylus" "Button" "8" "button +8 "
+xsetwacom set "Wacom Intuos S Pen stylus" Button 1 "button +1 " # Touch, mapped to left click
+xsetwacom set "Wacom Intuos S Pen stylus" Button 2 "button +3 " # Lower Button, mapped to right click
+xsetwacom set "Wacom Intuos S Pen stylus" Button 3 key "+Ctrl C -Ctrl" # Upper Button, mapped to Ctrl+C
+
+xsetwacom set "Wacom Intuos S Pen stylus" Button 8 "button +8 "
+
+
+xsetwacom set "Wacom Intuos S Pad pad" AbsWheelUp key "+"
+xsetwacom set "Wacom Intuos S Pad pad" AbsWheelDown key "-"

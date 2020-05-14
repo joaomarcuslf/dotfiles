@@ -10,5 +10,9 @@ if [ -f ~/.bash_locals ]; then
 . ~/.bash_locals
 fi
 
-# added by Anaconda3 installer
-export PATH="/home/joaomarcuslf/anaconda3/bin:$PATH"
+if [ -f ~/wacom ]; then
+. ~/wacom
+fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
