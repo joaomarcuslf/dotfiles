@@ -10,8 +10,8 @@ if [ -f ~/.bash_locals ]; then
 . ~/.bash_locals
 fi
 
-if [ -f ~/wacom ]; then
-. ~/wacom
+if xsetwacom --list devices | grep -q 'Wacom Intuos S'; then
+. ~/dotfiles/wacom
 fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

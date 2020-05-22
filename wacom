@@ -7,8 +7,8 @@
 # Pad
 xsetwacom set "Wacom Intuos S Pad pad" Button 3 key "PgDn" # Upper Left, mapped to Page Down
 xsetwacom set "Wacom Intuos S Pad pad" Button 9 key "PgUp" # Upper Right, mapped to Page Up
-xsetwacom set "Wacom Intuos S Pad pad" Button 1 key "+Ctrl Z -Ctrl" # Lower Left, mapped to Ctrl+Z
-xsetwacom set "Wacom Intuos S Pad pad" Button 8 key "+Ctrl Shift Z -Ctrl" # Lower Right, mapped to Ctrl+Shift+Z
+xsetwacom set "Wacom Intuos S Pad pad" Button 1 key "+Ctrl W -Ctrl" # Lower Left, mapped to Ctrl+W
+xsetwacom set "Wacom Intuos S Pad pad" Button 8 key "+Ctrl Shift T -Ctrl" # Lower Right, mapped to Ctrl+Shift+T
 
 # Stylus
 xsetwacom set "Wacom Intuos S Pen stylus" Mode Relative
