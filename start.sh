@@ -1,3 +1,12 @@
+# Zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -sf `pwd`/zsh-themes/joaomarcuslf.zsh-theme ~/.oh-my-zsh/themes/joaomarcuslf.zsh-theme
+
+cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins && git clone https://github.com/djui/alias-tips.git
+cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions
+
+cd ~
+
 mv ~/.vimrc ~/.vimrc.pre-dotfiles
 mv ~/.zshrc ~/.zshrc.pre-dotfiles
 mv ~/.bash_aliases ~/.bash_aliases.pre-dotfiles
@@ -15,15 +24,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 curl -sSL https://get.rvm.io | bash -s stable --ruby --gems=rails,puma
 
 nvm install --lts
-
-# Zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -sf `pwd`/zsh-themes/joaomarcuslf.zsh-theme ~/.oh-my-zsh/themes/joaomarcuslf.zsh-theme
-
-cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins && git clone https://github.com/djui/alias-tips.git
-cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions
-
-cd ~
 
 # Lein for Clojure
 curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > lein
