@@ -21,9 +21,10 @@ ln -sf `pwd`/.bashrc ~/.bashrc
 
 # Node and Ruby
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-curl -sSL https://get.rvm.io | bash -s stable --ruby --gems=rails,puma
 
 nvm install --lts
+
+curl -sSL https://get.rvm.io | bash -s stable --ruby --gems=rails,puma
 
 # Lein for Clojure
 curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > lein
