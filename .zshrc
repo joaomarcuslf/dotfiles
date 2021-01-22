@@ -20,7 +20,7 @@ ZSH_THEME="joaomarcuslf"
 
 ENABLE_CORRECTION="true"
 
-plugins=(git git-extras zsh-autosuggestions alias-tips rvm)
+plugins=(git git-extras zsh-autosuggestions alias-tips rvm python pip)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -35,6 +35,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-source $HOME/.rvm/scripts/rvm
