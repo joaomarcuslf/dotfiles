@@ -9,6 +9,7 @@ sudo chmod +x start.sh
 
 ## To install:
 
+- [Kite](https://www.kite.com/install/?utm_medium=editor&utm_source=vscode)
 - FiraCode
 - nvm
 - node
