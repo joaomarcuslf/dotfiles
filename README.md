@@ -7,27 +7,14 @@ sudo chmod +x start.sh
 ./start.sh
 ```
 
-## To install:
+## To manually install:
 
 - [Kite](https://www.kite.com/install/?utm_medium=editor&utm_source=vscode)
-- FiraCode
-- nvm
-- node
-- rbenv
-- ruby
-- python
-- clojure
-- leiningen
-- openJDK (jre & jdk)
-- php
-- firefox-nightly
-- firefox-aurora/firefox-developer
-- git
-  - git-extras
-- tig
-- oh-my-zsh
-  - zsh-autosuggestions
-  - alias-tips
+- [FiraCode](https://github.com/tonsky/FiraCode/wiki/Installing)
+- [pip](https://pip.pypa.io/en/stable/installing/)
+- [git-extras](https://github.com/tj/git-extras/blob/master/Installation.md)
+- [Insomnia](https://insomnia.rest/download)
+- [tig](https://jonas.github.io/tig/INSTALL.html)
 
 ## Mac only:
 
@@ -37,4 +24,3 @@ sudo chmod +x start.sh
 ## Linux only:
 
 - terminator
-- [brew](http://linuxbrew.sh/)
