@@ -9,12 +9,28 @@ load-nvmrc() {
     nvm use
   fi
 }
+
 run-ls() {
   ls -la
 }
 
+load-setup() {
+  if [[ -f ../../setup.sh && -r ../../setup.sh ]]; then
+    sh ../../setup.sh
+  fi
+
+  if [[ -f ../setup.sh && -r ../setup.sh ]]; then
+    sh ../setup.sh
+  fi
+
+  if [[ -f setup.sh && -r setup.sh ]]; then
+    sh setup.sh
+  fi
+}
+
 add-zsh-hook chpwd load-nvmrc
 add-zsh-hook chpwd run-ls
+add-zsh-hook chpwd load-setup
 
 ZSH_THEME="joaomarcuslf"
 
@@ -35,3 +51,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
