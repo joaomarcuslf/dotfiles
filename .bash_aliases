@@ -54,4 +54,5 @@ alias rmigrate='bundle exec rake db:migrate'
 alias rscaffold='bundle exec rails generate scaffold'
 
 # Personal Scripts
-alias remove-duplicates='python ~/dotfiles/scripts/remove-duplicates.py'
+alias remove-duplicates='python3 ~/dotfiles/scripts/remove-duplicates.py'
+alias git-profile='python3 ~/dotfiles/scripts/git-profile.py'
