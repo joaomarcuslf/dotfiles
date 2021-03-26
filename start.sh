@@ -42,6 +42,8 @@ if [ $answer == 1 ]; then
 fi
 
 # Zsh
+export RUNZSH=no
+
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sf $(pwd)/zsh-themes/joaomarcuslf.zsh-theme ~/.oh-my-zsh/themes/joaomarcuslf.zsh-theme
 
