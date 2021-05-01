@@ -9,12 +9,10 @@ for file in files:
     print("Editing file: " + file)
     lines_seen = []
 
-    for each_line in open(file, "r"):
-        line = each_line.rstrip("\n")
-
+    for line in open(file, "r"):
         if line not in lines_seen:
             lines_seen.append(line)
 
-    with open(file, 'w') as writer:
-        for line in lines_seen:
-            writer.write(line)
+    file = open(file, 'w')
+    file.writelines(lines_seen)
+    file.close()
