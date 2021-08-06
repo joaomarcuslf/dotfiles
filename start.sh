@@ -44,22 +44,26 @@ fi
 # Zsh
 export RUNZSH=no
 
+dotfiles=`pwd`
+
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sf $(pwd)/zsh-themes/joaomarcuslf.zsh-theme ~/.oh-my-zsh/themes/joaomarcuslf.zsh-theme
 
-cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins && git clone https://github.com/djui/alias-tips.git
-cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions
+cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/djui/alias-tips.git
+cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/zsh-users/zsh-autosuggestions
 
 cd ~
 
-mv ~/.vimrc ~/.vimrc.pre-dotfiles
-mv ~/.zshrc ~/.zshrc.pre-dotfiles
-mv ~/.bash_aliases ~/.bash_aliases.pre-dotfiles
-mv ~/.bash_exports ~/.bash_exports.pre-dotfiles
-mv ~/.bashrc ~/.bashrc.pre-dotfiles
+[ ! -f ~/.vimrc ] || mv ~/.vimrc ~/.vimrc.pre-dotfiles
+[ ! -f ~/.zshrc ] || mv ~/.zshrc ~/.zshrc.pre-dotfiles
+[ ! -f ~/.bash_aliases ] || mv ~/.bash_aliases ~/.bash_aliases.pre-dotfiles
+[ ! -f ~/.bash_exports ] || mv ~/.bash_exports ~/.bash_exports.pre-dotfiles
+[ ! -f ~/.bashrc ] || mv ~/.bashrc ~/.bashrc.pre-dotfiles
 
-ln -sf $(pwd)/.vimrc ~/.vimrc
-ln -sf $(pwd)/.zshrc ~/.zshrc
-ln -sf $(pwd)/.bash_aliases ~/.bash_aliases
-ln -sf $(pwd)/.bash_exports ~/.bash_exports
-ln -sf $(pwd)/.bashrc ~/.bashrc
+ln -sf $dotfiles/.vimrc ~/.vimrc
+ln -sf $dotfiles/.zshrc ~/.zshrc
+ln -sf $dotfiles/.bash_aliases ~/.bash_aliases
+ln -sf $dotfiles/.bash_exports ~/.bash_exports
+ln -sf $dotfiles/.bashrc ~/.bashrc
+
+zsh

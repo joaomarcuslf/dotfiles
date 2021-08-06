@@ -57,3 +57,4 @@ alias rscaffold='bundle exec rails generate scaffold'
 # Personal Scripts
 alias remove-duplicates='python3 ~/dotfiles/scripts/remove-duplicates.py'
 alias git-profile='python3 ~/dotfiles/scripts/git-profile.py'
+alias branch='python3 ~/dotfiles/scripts/git-branch.py'
