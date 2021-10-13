@@ -2,6 +2,7 @@ source ~/.bashrc
 source ~/.bash_locals
 
 ENABLE_CORRECTION="true"
+
 ENABLE_LOAD_NVM=1
 ENABLE_LS_ON_ENTER=1
 
