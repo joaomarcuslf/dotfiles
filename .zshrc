@@ -1,4 +1,20 @@
 source ~/.bashrc
+source ~/.bash_locals
+
+$LAST_PATH = `pwd`
+
+cd ~/dotfiles
+if [[ `git status --porcelain` ]]; then
+  echo "Updating dotfiles Repo"
+
+  git pull
+
+  reload
+  cd $LAST_PATH
+else
+  cd $LAST_PATH
+fi
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=~/.oh-my-zsh
 
@@ -33,6 +49,7 @@ add-zsh-hook chpwd run-ls
 add-zsh-hook chpwd load-setup
 
 ZSH_THEME="joaomarcuslf"
+# ZSH_THEME="frontcube"
 
 ENABLE_CORRECTION="true"
 
@@ -57,3 +74,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init --path)"
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/joaolemos/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/joaolemos/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/joaolemos/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/joaolemos/google-cloud-sdk/completion.zsh.inc'; fi

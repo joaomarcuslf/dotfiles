@@ -45,6 +45,7 @@ alias yc='rm -rf node_modules && y'
 alias yarn-add='ya'
 alias yarn-test='yt'
 alias yarn-clear='yc'
+alias yarn-crisis='rm -rf node_modules && rm yarn.lock && y'
 
 # Ruby
 alias bexec='bundle exec'
@@ -54,7 +55,14 @@ alias railss='bundle exec rails s'
 alias rmigrate='bundle exec rake db:migrate'
 alias rscaffold='bundle exec rails generate scaffold'
 
+# Go
+
+alias got="go get"
+alias got-all="go get ./..."
+
 # Personal Scripts
 alias remove-duplicates='python3 ~/dotfiles/scripts/remove-duplicates.py'
 alias git-profile='python3 ~/dotfiles/scripts/git-profile.py'
 alias branch='python3 ~/dotfiles/scripts/git-branch.py'
+
+alias test-factory='bash <(curl -s https://raw.githubusercontent.com/arctouch/web-tests-factory/main/testsFactory.sh)'

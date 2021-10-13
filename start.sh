@@ -59,11 +59,15 @@ cd ~
 [ ! -f ~/.bash_aliases ] || mv ~/.bash_aliases ~/.bash_aliases.pre-dotfiles
 [ ! -f ~/.bash_exports ] || mv ~/.bash_exports ~/.bash_exports.pre-dotfiles
 [ ! -f ~/.bashrc ] || mv ~/.bashrc ~/.bashrc.pre-dotfiles
+[ ! -f ~/.hyper.js ] || mv ~/.hyper.js ~/.hyper.js.pre-dotfiles
 
 ln -sf $dotfiles/.vimrc ~/.vimrc
 ln -sf $dotfiles/.zshrc ~/.zshrc
 ln -sf $dotfiles/.bash_aliases ~/.bash_aliases
 ln -sf $dotfiles/.bash_exports ~/.bash_exports
 ln -sf $dotfiles/.bashrc ~/.bashrc
+ln -sf $dotfiles/.hyper.js ~/.hyper.js
+
+touch ~/.bash_locals
 
 zsh

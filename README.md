@@ -3,6 +3,11 @@
 ## Getting Started:
 
 ```sh
+cd ~
+git clone https://github.com/joaomarcuslf/dotfiles/
+
+cd dotfiles
+
 sudo chmod +x start.sh
 ./start.sh
 ```
@@ -13,12 +18,14 @@ sudo chmod +x start.sh
 - [FiraCode](https://github.com/tonsky/FiraCode/wiki/Installing)
 - [pip](https://pip.pypa.io/en/stable/installing/)
 - [git-extras](https://github.com/tj/git-extras/blob/master/Installation.md)
+- [Hyper](https://hyper.is/)
 - [Insomnia](https://insomnia.rest/download)
 - [tig](https://jonas.github.io/tig/INSTALL.html)
 - [RStudio](https://rstudio.com/products/rstudio/download/)
 - [R](https://cran.r-project.org/)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/)
 
+<!-- Commenting this out, giving Hyper a chance
 ## Mac only:
 
 - iterm2
@@ -28,4 +35,4 @@ sudo chmod +x start.sh
 ## Linux only:
 
 - terminator
-- [One Dark](https://github.com/EliverLara/terminator-themes)
+- [One Dark](https://github.com/EliverLara/terminator-themes) -->
