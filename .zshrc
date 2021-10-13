@@ -1,8 +1,6 @@
 source ~/.bashrc
 source ~/.bash_locals
 
-ENABLE_CORRECTION="true"
-
 ENABLE_LOAD_NVM=1
 ENABLE_LS_ON_ENTER=1
 
@@ -60,6 +58,8 @@ load-setup() {
 add-zsh-hook chpwd load-nvmrc
 add-zsh-hook chpwd run-ls
 add-zsh-hook chpwd load-setup
+
+ENABLE_CORRECTION="true"
 
 ZSH_THEME="joaomarcuslf"
 # ZSH_THEME="frontcube"
