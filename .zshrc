@@ -9,7 +9,7 @@ if [[ `git status --porcelain` ]]; then
 
   git pull
 
-  reload
+  refresh
   cd $LAST_PATH
 else
   cd $LAST_PATH
