@@ -13,7 +13,7 @@ HEADHASH=$(git rev-parse HEAD)
 UPSTREAMHASH=$(git rev-parse master@{upstream})
 
 if [ "$HEADHASH" != "$UPSTREAMHASH" ]; then
-  echo "Updating dotfiles Repo"
+  echo "Updating dotfiles, pulling from remote"
 
   git pull
 
@@ -21,7 +21,6 @@ if [ "$HEADHASH" != "$UPSTREAMHASH" ]; then
   cd $LAST_PATH
   ENABLE_LS_ON_ENTER=1
 else
-  echo "No changes on repo"
   cd $LAST_PATH
   ENABLE_LS_ON_ENTER=1
 fi
