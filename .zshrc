@@ -1,7 +1,7 @@
 source ~/.bashrc
 source ~/.bash_locals
 
-$LAST_PATH = `pwd`
+LAST_PATH=`pwd`
 
 cd ~/dotfiles
 if [[ `git status --porcelain` ]]; then
