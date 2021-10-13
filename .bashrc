@@ -31,3 +31,9 @@ if [ -f '/Users/joaolemos/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$PATH:$HOME/bin"
+fi
