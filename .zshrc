@@ -8,7 +8,11 @@ LAST_PATH=`pwd`
 
 ENABLE_LS_ON_ENTER=0
 cd ~/dotfiles
-if [[ `git status --porcelain` ]]; then
+git fetch
+HEADHASH=$(git rev-parse HEAD)
+UPSTREAMHASH=$(git rev-parse master@{upstream})
+
+if [ "$HEADHASH" != "$UPSTREAMHASH" ]; then
   echo "Updating dotfiles Repo"
 
   git pull
