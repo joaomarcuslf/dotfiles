@@ -18,8 +18,8 @@ if [ "$HEADHASH" != "$UPSTREAMHASH" ]; then
   git pull
 
   cd $LAST_PATH
+  
   refresh
-  ENABLE_LS_ON_ENTER=1
 else
   cd $LAST_PATH
   ENABLE_LS_ON_ENTER=1
