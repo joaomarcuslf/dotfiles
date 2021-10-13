@@ -17,8 +17,8 @@ if [ "$HEADHASH" != "$UPSTREAMHASH" ]; then
 
   git pull
 
-  refresh
   cd $LAST_PATH
+  refresh
   ENABLE_LS_ON_ENTER=1
 else
   cd $LAST_PATH
