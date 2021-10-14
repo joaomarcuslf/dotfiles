@@ -13,18 +13,18 @@ sudo chmod +x start.sh
 ```
 
 ## To manually install:
-
-- [Kite](https://www.kite.com/install/?utm_medium=editor&utm_source=vscode)
 - [FiraCode](https://github.com/tonsky/FiraCode/wiki/Installing)
-- [pip](https://pip.pypa.io/en/stable/installing/)
 - [git-extras](https://github.com/tj/git-extras/blob/master/Installation.md)
 - [Hyper](https://hyper.is/)
-- [Insomnia](https://insomnia.rest/download)
 - [tig](https://jonas.github.io/tig/INSTALL.html)
+
+## Recommended:
+- [pip](https://pip.pypa.io/en/stable/installing/)
+- [Kite](https://www.kite.com/install/?utm_medium=editor&utm_source=vscode)
+- [Insomnia](https://insomnia.rest/download)
 - [RStudio](https://rstudio.com/products/rstudio/download/)
 - [R](https://cran.r-project.org/)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/)
-
 
 <!-- Commenting this out, giving Hyper a chance
 ## Mac only:
@@ -37,3 +37,11 @@ sudo chmod +x start.sh
 
 - terminator
 - [One Dark](https://github.com/EliverLara/terminator-themes) -->
+
+## How to use this repo:
+
+This is my dotfiles, it comes with a bunch of scripts, and configs to improve my productive. If you want to use, you must follow the [Getting started](#getting-started), and then [manually install](#manually-install) some packages that are useful.
+
+If you need to add custom variables, create this files `~/.bash_locals`, this will be imported in the `.bashrc` keeping your exports safe.
+
+Also, after you run `start.sh`, your old configs will be saved in files with the sufix `.pre-dotfiles`.
