@@ -16,7 +16,7 @@ module.exports = {
         // font weight for bold characters: 'normal' or 'bold'
         fontWeightBold: 'bold',
         // line height as a relative unit
-        lineHeight: 1,
+        lineHeight: 1.2,
         // letter spacing as a relative unit
         letterSpacing: 0,
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
@@ -50,7 +50,7 @@ module.exports = {
         // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
         showWindowControls: '',
         // custom padding (CSS format, i.e.: `top right bottom left`)
-        padding: '12px 14px',
+        padding: '5px 0px',
         // the full list. if you're going to provide the full color palette,
         // including the 6 x 6 color cubes and the grayscale map, just provide
         // an array here instead of a color map object
@@ -101,7 +101,7 @@ module.exports = {
         // Supported Options:
         //  1. 'SOUND' -> Enables the bell as a sound
         //  2. false: turns off the bell
-        bell: 'SOUND',
+        bell: false,
         // An absolute file path to a sound file on the machine.
         // bellSoundURL: '/path/to/sound/file',
         // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
@@ -126,6 +126,10 @@ module.exports = {
         // set to true to disable auto updates
         disableAutoUpdates: false,
         // for advanced config flags please refer to https://hyper.is/#cfg
+        opacity: {
+            focus: 0.9,
+            blur: 0.75,
+        },
     },
     // a list of plugins to fetch and install from npm
     // format: [@org/]project[#version]
@@ -134,7 +138,14 @@ module.exports = {
     //   `@company/project`
     //   `project#1.0.1`
     plugins: [
-        'hyperterm-atom-dark'
+        'hypertheme',
+        'hyper-overlay',
+        'hyper-tab-icons',
+        'hyper-statusline',
+        'hyperterm-tabs',
+        'hyperlinks',
+        'hyper-opacity',
+        'hyper-one-dark',
     ],
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
