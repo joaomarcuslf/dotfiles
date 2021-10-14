@@ -40,7 +40,7 @@ sudo chmod +x start.sh
 
 ## How to use this repo:
 
-This is my dotfiles, it comes with a bunch of scripts, and configs to improve my productive. If you want to use, you must follow the [Getting started](#getting-started), and then [manually install](#manually-install) some packages that are useful.
+This is my dotfiles, it comes with a bunch of scripts, and configs to improve my productive. If you want to use, you must follow the [Getting started](#getting-started), and then [manually install](#to-manually-install) some packages that are useful.
 
 If you need to add custom variables, create this files `~/.bash_locals`, this will be imported in the `.bashrc` keeping your exports safe.
 
