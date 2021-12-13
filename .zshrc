@@ -4,7 +4,7 @@ source ~/.bash_locals
 ENABLE_LOAD_NVM=1
 ENABLE_LS_ON_ENTER=1
 
-LAST_PATH=`pwd`
+LAST_PATH=$(pwd)
 
 ENABLE_LS_ON_ENTER=0
 cd ~/dotfiles
@@ -18,7 +18,7 @@ if [ "$HEADHASH" != "$UPSTREAMHASH" ]; then
   git pull
 
   cd $LAST_PATH
-  
+
   refresh
 else
   cd $LAST_PATH

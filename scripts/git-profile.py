@@ -27,7 +27,7 @@ def set(arg):
         os.popen(f'mkdir -p ~/.git-profiles && mkdir -p ~/.git-profiles/.ssh')
         os.popen(f'cp ~/.git-profiles/{file}.{arg} ~/{file}')
 
-    os.popen(f'ssh-add -K ~/.ssh/id_ed25519')
+    os.popen(f'ssh-add ~/.ssh/id_ed25519')
 
 
 def create(arg):
