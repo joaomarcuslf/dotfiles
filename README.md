@@ -16,11 +16,13 @@ sudo chmod +x start.sh
 - [FiraCode](https://github.com/tonsky/FiraCode/wiki/Installing)
 - [git-extras](https://github.com/tj/git-extras/blob/master/Installation.md)
 - [Hyper](https://hyper.is/)
+- [Docker](https://www.docker.com/)
+- [Gitkraken](https://www.gitkraken.com/)
+- [VsCode](https://code.visualstudio.com/)
 
 ## Recommended:
 - [pip](https://pip.pypa.io/en/stable/installing/)
 - [tig](https://jonas.github.io/tig/INSTALL.html)
-- [Kite](https://www.kite.com/install/?utm_medium=editor&utm_source=vscode)
 - [Insomnia](https://insomnia.rest/download)
 - [RStudio](https://rstudio.com/products/rstudio/download/)
 - [R](https://cran.r-project.org/)
