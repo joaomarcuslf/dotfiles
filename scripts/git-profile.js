@@ -9,7 +9,7 @@ const HOME_PATH = os.homedir();
 const BASE_PATH = `${HOME_PATH}/.git-profiles`;
 const SECURITY_TYPE = "id_ed25519";
 
-const VERSION = "1.1.0";
+const VERSION = "1.1.1";
 
 function checkIfExist(path) {
   return fs.existsSync(path);
