@@ -34,6 +34,9 @@ function createFile(path, initialContent = "") {
 function copyFile(src, dest) {
   fs.copyFileSync(src, dest);
 }
+function removeFile(src) {
+  fs.rmSync(src);
+}
 
 function writeJson(path, data) {
   fs.writeFileSync(path, JSON.stringify(data));
@@ -137,6 +140,41 @@ function create(arg = "", securityType = SECURITY_TYPE) {
   print(`Profile ${arg} created`);
 }
 
+function remove(arg = "") {
+  if (arg === "") {
+    print("You need to provide a name for the profile");
+    return;
+  }
+
+  const profiles = readJson(buildPath(["profiles.json"]));
+  const profile = profiles.find((profile) => profile.name === arg);
+
+  if (!profile) {
+    print("Profile does not exist");
+    return;
+  }
+
+  const { securityType } = profile;
+
+  removeFile(buildPath([`.gitconfig.${arg}`], BASE_PATH));
+
+  removeFile(buildPath([".ssh", `${securityType}.${arg}`], BASE_PATH));
+
+  removeFile(buildPath([".ssh", `${securityType}.pub.${arg}`], BASE_PATH));
+
+  const newProfiles = profiles.filter((profile) => profile.name !== arg);
+
+  writeJson(buildPath(["profiles.json"]), newProfiles);
+
+  const current = readJson(buildPath(["current.json"]));
+
+  if (current.name === arg) {
+    writeJson(buildPath(["current.json"]), {});
+  }
+
+  print(`Profile ${arg} is removed`);
+}
+
 function list() {
   const profiles = readJson(buildPath(["profiles.json"]));
   const current = readJson(buildPath(["current.json"]));
@@ -208,6 +246,8 @@ switch (option) {
     return set(arg);
   case "create":
     return create(arg, additionalArg);
+  case "remove":
+    return remove(arg);
   case "list":
     return list();
   case "migrate":
