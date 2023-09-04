@@ -201,6 +201,8 @@ function help() {
     "security is the type of security you want to use, default: id_ed25519",
     2,
   );
+  print("remove $arg:", 1);
+  print("will remove the profile", 2);
   print("list:", 1);
   print("will list all the profiles", 2);
   print("help:", 1);
