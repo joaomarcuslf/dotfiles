@@ -4,6 +4,7 @@ alias findInFiles='grep -Rins'
 alias mkdir='mkdir -p'
 alias ports='lsof -i -n -P | grep TCP'
 alias refresh='source ~/.zshrc'
+alias reload='refresh'
 alias rm='rm -i -f'
 alias wor='cd ~/workspace'
 alias google='googler -n 7 -c ru -l ru'
@@ -62,7 +63,9 @@ alias got-all="go get ./..."
 
 # Personal Scripts
 alias remove-duplicates='python3 ~/dotfiles/scripts/remove-duplicates.py'
-alias git-profile='python3 ~/dotfiles/scripts/git-profile.py'
 alias branch='python3 ~/dotfiles/scripts/git-branch.py'
+
+# New aliases
+alias git-profile='node ~/dotfiles/scripts/git-profile.js'
 
 alias test-factory='bash <(curl -s https://raw.githubusercontent.com/arctouch/web-tests-factory/main/testsFactory.sh)'
